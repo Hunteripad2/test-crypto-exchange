@@ -1,26 +1,34 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="px-main pt-60">
+    <Title />
+    <ExchangePanel />
+    <div class="mt-8 flex items-end justify-end">
+      <Address />
+      <ExchangeButton />
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Title from "./components/Title.vue";
+import ExchangePanel from "./components/ExchangePanel.vue";
+import Address from "./components/Address.vue";
+import ExchangeButton from "./components/ExchangeButton.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Title,
+    ExchangePanel,
+    Address,
+    ExchangeButton,
+  },
+};
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: "Vollkorn";
+  color: black;
 }
 </style>
