@@ -5,7 +5,7 @@
   >
     <Search
       :allCurrencies="allCurrencies"
-      @close="this.$emit('close')"
+      @close="handleClose()"
       @search="setFilter"
     />
     <CurrencyList
@@ -38,6 +38,10 @@ export default {
   methods: {
     setFilter(filter) {
       this.filter = filter;
+    },
+    handleClose() {
+      this.$emit("close");
+      this.filter = null;
     },
   },
 };
