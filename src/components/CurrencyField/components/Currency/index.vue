@@ -1,7 +1,9 @@
 <template>
-  <button class="w-1/4 relative">
-    <image />
-    <span>BTC</span>
+  <button class="sm:w-1/4 w-2/5">
+    <img class="h-1/2 inline" v-if="currentCurrency" :src="currentCurrency.image" />
+    <span class="mx-2">{{
+      currentCurrency?.ticker.toUpperCase() || "???"
+    }}</span>
     <svg
       width="10"
       height="6"
@@ -21,5 +23,8 @@
 <script>
 export default {
   name: "Currency",
+  props: {
+    currentCurrency: Object,
+  },
 };
 </script>
