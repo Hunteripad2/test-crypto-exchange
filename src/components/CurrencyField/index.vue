@@ -5,7 +5,7 @@
     >
       <input
         :disabled="!canChangeAmount"
-        :value="minimalExchangeAmount || estimatedExchangeAmount || '-'"
+        :value="exchangeAmount || estimatedExchangeAmount || '-'"
         type="text"
         class="sm:w-3/4 w-3/5 bg-transparent px-4 h-full"
         @change="this.$emit('exchangeAmountChange', $event.target.value)"
@@ -37,7 +37,7 @@ export default {
   props: {
     allCurrencies: Array,
     currentCurrency: Object,
-    minimalExchangeAmount: Number,
+    exchangeAmount: Number,
     estimatedExchangeAmount: Number,
     canChangeAmount: Boolean,
   },

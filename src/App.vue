@@ -3,11 +3,13 @@
     class="sm:px-desktop px-mobile sm:pt-60 pt-16 font-vollkorn text-primary"
   >
     <Title />
-    <div class="mt-16 flex sm:flex-row flex-col sm:items-center items-end justify-between">
+    <div
+      class="mt-16 flex sm:flex-row flex-col sm:items-center items-end justify-between"
+    >
       <CurrencyField
         :allCurrencies="allCurrencies"
         :currentCurrency="firstCurrency"
-        :minimalExchangeAmount="minimalExchangeAmount"
+        :exchangeAmount="exchangeAmount"
         :canChangeAmount="!!minimalExchangeAmount"
         @chooseCurrency="setCurrencyFirst"
         @exchangeAmountChange="handleExchangeAmountChange"
