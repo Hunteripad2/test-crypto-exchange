@@ -7,8 +7,8 @@
       @click="this.$emit('chooseCurrency', currency.ticker)"
     >
       <img class="h-1/2" :src="currency.image" />
-      <span class="ml-4">{{ currency.ticker.toUpperCase() }}</span>
-      <span class="ml-4 text-light">{{ currency.name }}</span>
+      <span class="ml-4 leading-none h-3">{{ currency.ticker.toUpperCase() }}</span>
+      <span class="ml-4 text-light leading-none h-3">{{ currency.name }}</span>
     </li>
   </ul>
 </template>

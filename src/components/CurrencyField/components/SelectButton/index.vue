@@ -5,7 +5,7 @@
       v-if="currentCurrency"
       :src="currentCurrency.image"
     />
-    <span class="mx-2">{{
+    <span class="mx-2 leading-none h-3">{{
       currentCurrency?.ticker.toUpperCase() || "???"
     }}</span>
     <svg
