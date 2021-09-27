@@ -13,6 +13,7 @@
         :canChangeAmount="!!minimalExchangeAmount"
         @chooseCurrency="setCurrencyFirst"
         @exchangeAmountChange="handleExchangeAmountChange"
+        class="z-20"
       />
       <SwapButton @swapCurrencies="swapCurrencies()" />
       <CurrencyField
@@ -21,6 +22,7 @@
         :estimatedExchangeAmount="estimatedExchangeAmount"
         :canChangeAmount="false"
         @chooseCurrency="setCurrencySecond"
+        class="z-10"
       />
     </div>
     <div class="sm:mt-8 mt-12 flex sm:flex-row flex-col items-end justify-end">
