@@ -1,16 +1,19 @@
 <template>
   <div class="relative w-full h-12 z-10">
     <div
-      class="absolute flex w-full h-full bg-input rounded border border-primary divide-x"
+      class="absolute flex items-center w-full h-full bg-input rounded border border-primary"
     >
       <input
         :disabled="!canChangeAmount"
         :value="minimalExchangeAmount || estimatedExchangeAmount || '-'"
         type="text"
-        class="sm:w-3/4 w-3/5 bg-transparent px-4"
+        class="sm:w-3/4 w-3/5 bg-transparent px-4 h-full"
         @change="this.$emit('exchangeAmountChange', $event.target.value)"
       />
-      <Currency @click="openSearch()" :currentCurrency="currentCurrency" />
+      <div
+        class="absolute h-3/5 sm:w-3/4 w-3/5 border-r border-primary left-0 pointer-events-none"
+      />
+      <SelectButton @click="openSearch()" :currentCurrency="currentCurrency" />
     </div>
     <CurrencySelection
       :allCurrencies="allCurrencies"
@@ -22,13 +25,13 @@
 </template>
 
 <script>
-import Currency from "./components/Currency";
+import SelectButton from "./components/SelectButton";
 import CurrencySelection from "./components/CurrencySelection";
 
 export default {
   name: "CurrencyField",
   components: {
-    Currency,
+    SelectButton,
     CurrencySelection,
   },
   props: {

@@ -1,6 +1,6 @@
 <template>
   <button
-    class="sm:mx-8 sm:my-0 my-5 sm:transform sm:rotate-90 w-5"
+    class="sm:mx-8 sm:my-0 my-5 sm:transform sm:rotate-90 w-5 hover:opacity-75"
     @click="this.$emit('swapCurrencies')"
   >
     <svg

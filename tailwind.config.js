@@ -23,6 +23,7 @@ module.exports = {
         highlight: "#EAF1F7",
         input: "#F6F7F8",
         primary: "#11B3FE",
+        "primary-highlight": "#0095E0",
       },
       borderColor: {
         primary: "#E3EBEF",

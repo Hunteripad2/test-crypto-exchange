@@ -8,7 +8,7 @@
         :allCurrencies="allCurrencies"
         :currentCurrency="firstCurrency"
         :minimalExchangeAmount="minimalExchangeAmount"
-        :canChangeAmount="!!firstCurrency"
+        :canChangeAmount="!!minimalExchangeAmount"
         @chooseCurrency="setCurrencyFirst"
         @exchangeAmountChange="handleExchangeAmountChange"
       />

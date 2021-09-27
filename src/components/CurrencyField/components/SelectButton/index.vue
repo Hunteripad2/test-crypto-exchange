@@ -1,6 +1,10 @@
 <template>
-  <button class="sm:w-1/4 w-2/5">
-    <img class="h-1/2 inline" v-if="currentCurrency" :src="currentCurrency.image" />
+  <button class="sm:w-1/4 w-2/5 h-full">
+    <img
+      class="h-1/2 inline"
+      v-if="currentCurrency"
+      :src="currentCurrency.image"
+    />
     <span class="mx-2">{{
       currentCurrency?.ticker.toUpperCase() || "???"
     }}</span>
@@ -22,7 +26,7 @@
 
 <script>
 export default {
-  name: "Currency",
+  name: "SelectButton",
   props: {
     currentCurrency: Object,
   },
